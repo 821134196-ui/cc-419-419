@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>婚纱礼服试穿与返店清点系统</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <h1>玫瑰婚纱工坊</h1>
+      <p>试穿 · 出店 · 返店清点</p>
+    </div>
+    <nav id="nav">
+      <button data-view="gowns">礼服档案</button>
+      <button data-view="calendar">试穿日历</button>
+      <button data-view="accessories">搭配清单</button>
+      <button data-view="outcheck">出店核验</button>
+      <button data-view="return">返店检查</button>
+      <button data-view="deposits">押金记录</button>
+    </nav>
+    <div class="foot" id="foot-info">演示数据 · SQLite 本地存储</div>
+  </aside>
+
+  <main class="main">
+    <div class="page-head">
+      <div>
+        <h2 id="view-title">礼服档案</h2>
+        <div class="sub" id="view-sub">管理礼服照片、尺码与在店状态</div>
+      </div>
+      <div id="head-actions"></div>
+    </div>
+    <div id="view"></div>
+  </main>
+</div>
+
+<div class="modal-mask" id="modal-mask">
+  <div class="modal" id="modal">
+    <div class="modal-head">
+      <h3 id="modal-title"></h3>
+      <button class="x" id="modal-x">×</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-foot" id="modal-foot"></div>
+  </div>
+</div>
+
+<div id="toast"></div>
+<script src="/app.js"></script>
+</body>
+</html>
